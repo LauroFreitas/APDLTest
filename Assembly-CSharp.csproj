@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C2BD1795-C84E-81C2-1917-AC034948E874}</ProjectGuid>
+    <ProjectGuid>{306646CE-6706-E147-F61B-936B997FF5AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,9 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BarraEstabilidade.cs" />
+    <Compile Include="Assets\Scripts\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Animacoes.cs" />
     <Compile Include="Assets\Scripts\Game\ClassePorta.cs" />
-    <Compile Include="Assets\Scripts\Game\Itens.cs" />
-    <Compile Include="Assets\Scripts\Game\ItensManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Gavetas\AbrirGaveta.cs" />
+    <Compile Include="Assets\Scripts\Game\Gavetas\GavetaDireita.cs" />
+    <Compile Include="Assets\Scripts\Game\Gavetas\GavetaMeioE.cs" />
+    <Compile Include="Assets\Scripts\Game\Gavetas\JanelaAbrir.cs" />
+    <Compile Include="Assets\Scripts\Game\Item.cs" />
     <Compile Include="Assets\Scripts\Game\MouseControler.cs" />
     <Compile Include="Assets\Scripts\Game\Player\LigarLanterna.cs" />
     <Compile Include="Assets\Scripts\Game\Player\Player.cs" />
@@ -73,38 +79,51 @@
     <Compile Include="Assets\Scripts\Game\PortaAnimation.cs" />
     <Compile Include="Assets\Scripts\Game\PortaManager.cs" />
     <Compile Include="Assets\Scripts\Menu\ChangScene.cs" />
+    <Compile Include="Assets\Scripts\MetaEventSet.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\ChaveIten.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\ColideEventCorredor.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\Gavetas.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\Interagivel.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\Janela.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\LanternaIten.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\Pilhas.cs" />
+    <Compile Include="Assets\Scripts\ObjetosInterativos\Remedios.cs" />
+    <Compile Include="Assets\Scripts\PrimeiraFase.cs" />
+    <Compile Include="Assets\Scripts\SegundaFase.cs" />
+    <Compile Include="Assets\Scripts\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\TriggerEvent.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDL-/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Users/TUDO/Diversos/Unity/Unity_Verson/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

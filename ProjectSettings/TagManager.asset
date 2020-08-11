@@ -7,6 +7,20 @@ TagManager:
   - Chave
   - Porta
   - Tp
+  - Lanterna
+  - PortaChave
+  - Gaveta
+  - GavetaDireita
+  - GavetaMeioE
+  - Janela
+  - Janela2
+  - Janela3
+  - MesaTrigger
+  - TriggerFase2
+  - TriggerFase1
+  - TriggerFase3
+  - TriggerFase4
+  - TriggerFase5
   layers:
   - Default
   - TransparentFX

@@ -1,17 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System;
+
 
 
 public class Player : MonoBehaviour
 {
-    private string RayCastChave = "Chave";//seleciona a tag Lanterna para o campo serial
-   // private string RayCastLanterna = "Lanterna";//seleciona a tag Lanterna para o campo serial
-   // private string RayCastTV = "TV";//seleciona a tag Lanterna para o campo serial
-    private string RayCastPorta = "Porta";//seleciona a tag Lanterna para o campo serial
-    public GameObject playerPrefab;
+    
+    public GameObject ItensPai;
     public Camera cam;//area para camera 
-    public GameObject TextView;
+    public GameObject TextViewEvermelho;
+    public GameObject TextViewE;
+    public GameObject Invent;
+    public GameObject playerPrefabMao;
+    private Transform chave;
+    private Transform lanterna;
+   public void Start()
+    {
+        chave = ItensPai.transform.GetChild(0);
+        lanterna = ItensPai.transform.GetChild(1);
+    }
     public static Player singleton { get; set; } //criando singleton
     private void Awake()
     {
@@ -37,11 +46,34 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-       RayCast();
+        TextViewE.SetActive(false);
+        TextViewEvermelho.SetActive(false);
+        RayCast();
+        TrocarItens();
+        InputAction();
     }
+    public void TrocarItens()
+    {
+      
 
-
-    private void RayCast() 
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (chave.GetComponent<ChaveIten>().estado == true)
+            {
+                chave.GetComponent<ChaveIten>().pMItem.SetActive(true);
+                lanterna.GetComponent<LanternaIten>().pMItem.SetActive(false);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (lanterna.GetComponent<LanternaIten>().estado == true)
+            {
+                chave.GetComponent<ChaveIten>().pMItem.SetActive(false);
+                lanterna.GetComponent<LanternaIten>().pMItem.SetActive(true);
+            }
+        }
+    }
+    private void RayCast()
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -50,50 +82,65 @@ public class Player : MonoBehaviour
         {
             var selection = hit.transform;
 
-            if (selection.CompareTag(RayCastChave))
+            if (selection.gameObject.GetComponent<Interagivel>() == true)
             {
-                TextView.SetActive(true);
-                if (Input.GetKeyDown("e"))
+                var interaction = selection.gameObject.GetComponent<Interagivel>();
+                interaction.EventTriggerRay();
+                TextViewE.SetActive(true);
+            }
+            else if (selection.gameObject.CompareTag("Porta"))
+            {
+                Debug.Log(chave.GetComponent<ChaveIten>().estado);
+                if (selection.gameObject.name == "PF2" && chave.GetComponent<ChaveIten>().estado == false) 
                 {
-                    AdicionarItem(ItensManager.Singleton.chave);
-                    PortaManager.dtPorta.Invoke();
+                    TextViewEvermelho.SetActive(true);
+                }
+                else 
+                {
+                    TextViewE.SetActive(true);
                 }
             }
-            else if (selection.CompareTag(RayCastPorta))
-            {
-                TextView.SetActive(true);
-            }
-            else
-            {
-                TextView.SetActive(false);
-            }
-            /*
-            else if (selection.CompareTag(RayCastLanterna))
-            {
-                TextView.SetActive(true);
-                if (Input.GetKeyDown("e"))
-                {
-                    AdicionarItem(ItensManager.Singleton.lanterna);
-                }
-            }
-            else if (selection.CompareTag(RayCastTV))
-            {
-                TextView.SetActive(true);
-                if (Input.GetKeyDown("e"))
-                {
-                    //MetaEventSet.singleton.metaEvents[7].Event.Invoke();
-                }
-            }
-            else 
-            {
-                TextView.SetActive(false);
-            }
-            */
+
         }
-        
+
     }
-    private void AdicionarItem(Itens item) 
+    private void InputAction() 
     {
-        ItensManager.Singleton.dtInvetario.Invoke(item);
+        if (Invent.activeSelf == true) 
+        {
+            if (Input.GetKeyDown("i"))
+            {
+                Invent.SetActive(false);
+                Time.timeScale = 1;
+            }
+        }
+        else 
+        {
+            if (Input.GetKeyDown("i"))
+            {
+                Invent.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
+       
     }
+    void OnTriggerEnter(Collider _col)
+    {
+        if (_col.gameObject.CompareTag("TriggerFase1"))
+        {
+            MetaEventSet.singleton.metaEvents[7].Event.Invoke();
+            PortaManager.singleton.TrancarPortaF2();
+            GameObject.Find("StateMachine").GetComponent<StateMachine>().SetFase(2);
+          
+        }
+
+        if (_col.gameObject.CompareTag("TriggerFase2"))
+        {
+            MetaEventSet.singleton.metaEvents[7].Event.Invoke();
+            PortaManager.singleton.TrancarPortaF2();
+            GameObject.Find("StateMachine").GetComponent<StateMachine>().SetFase(3);
+
+        }
+    }
+    
 }
