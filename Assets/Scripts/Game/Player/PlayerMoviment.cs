@@ -17,12 +17,16 @@ public class PlayerMoviment : MonoBehaviour
     public bool isRunning = false;
     private bool isGraunded;
     Vector3 velocity;
-  
-    
+    AudioSource source;
+
+    public void Start()
+    {
+        source = FindObjectOfType<AudioManager>().sounds[3].source;
+    }
     private void Update()
     {
-       // AudioSource source;
-      //  source = FindObjectOfType<AudioManager>().sounds[3].source;
+       
+       
         isGraunded = Physics.CheckSphere(graundChack.position, graundDisitance, graundMask);
         //Velocidade de queda
         if (isGraunded && velocity.y < 0)
@@ -39,38 +43,35 @@ public class PlayerMoviment : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
         {
-            RunSpeed = 24;
+            RunSpeed = 20;
             isRunning = true;
             speed = RunSpeed;
-         /*
+         
             if (controller.isGrounded == true && controller.velocity.magnitude > 2f && source.isPlaying == false)
             {
-                Debug.Log("TESTE");
                 source.volume = Random.Range(0.6f, 1f);
                 source.pitch = Random.Range(1.4f, 2.3f);
                 source.panStereo = Random.Range(-0.5f, 0.5f);
                 PlaySoundMove("Andar");
             }
-        */
         }
         else
         {
-            /*
+            
             if (controller.isGrounded == true && controller.velocity.magnitude > 2f && source.isPlaying == false)
             {
                 source.volume = Random.Range(0.4f, 0.6f);
-                source.pitch = Random.Range(1, 1.3f);
+                source.pitch = Random.Range(0.8f, 1f);
                 PlaySoundMove("Andar");
-                Debug.Log("TESTE");
             }
-            */
-            NormalSpeed = 12;
+             
+            NormalSpeed = 9;
             isRunning = false;
             speed = NormalSpeed;
         }
     }
     public void PlaySoundMove(string name) 
     {
-       //FindObjectOfType<AudioManager>().Play(name);
+        FindObjectOfType<AudioManager>().Play(name);
     }
 }

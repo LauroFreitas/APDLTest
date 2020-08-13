@@ -2,31 +2,38 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AbrirGaveta
+    - AudioManager
     - BarraEstabilidade
     - ChangScene
+    - ChaveIten
     - ColideEventCorredor
-    - EventManager
     - GavetaDireita
     - GavetaMeioE
-    - ItensManager
+    - Gavetas
+    - Inventario
+    - Janela
     - JanelaAbrir
+    - LanternaIten
     - LigarLanterna
     - MetaEventSet
     - MouseControler
+    - PilhaInventario
+    - Pilhas
     - Player
     - PlayerMoviment
     - PortaAnimation
     - PortaManager
+    - PrimeiraFase
+    - Remedios
+    - SegundaFase
     - StateMachine
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -34,6 +41,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -60,6 +68,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
@@ -67,6 +79,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -81,52 +95,74 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11652}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11654}
+      Script: {instanceID: 11658}
     - Class: 114
-      Script: {instanceID: 11864}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 11872}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 11892}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 11948}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 12606}
+      Script: {instanceID: 12076}
     - Class: 114
-      Script: {instanceID: 12642}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12218}
     - Class: 114
-      Script: {instanceID: 12818}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 13200}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 12662}
     - Class: 114
-      Script: {instanceID: 25766}
+      Script: {instanceID: 12738}
+    - Class: 114
+      Script: {instanceID: 12838}
+    - Class: 114
+      Script: {instanceID: 12846}
+    - Class: 114
+      Script: {instanceID: 12874}
+    - Class: 114
+      Script: {instanceID: 12880}
+    - Class: 114
+      Script: {instanceID: 12996}
+    - Class: 114
+      Script: {instanceID: 13132}
+    - Class: 114
+      Script: {instanceID: 13140}
+    - Class: 114
+      Script: {instanceID: 13188}
+    - Class: 114
+      Script: {instanceID: 13228}
+    - Class: 114
+      Script: {instanceID: 13272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -172,19 +208,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11404}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11864}
+      Script: {instanceID: 11872}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12818}
+      Script: {instanceID: 12838}
     - Class: 114
-      Script: {instanceID: 13200}
+      Script: {instanceID: 13228}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -232,6 +268,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 66056c2209ff8e6b238f8b056c7eb331
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -298,6 +340,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangScene
+  - hash:
+      serializedVersion: 2
+      Hash: 56367277a38ed12e2b26306f5f3e6bea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pilhas
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -390,7 +438,7 @@ ScriptsOnlyBuild:
     className: Vignette
   - hash:
       serializedVersion: 2
-      Hash: c32295941ae7040fcd3b656484464881
+      Hash: 3df9fed923cd5c37cffcd7b6efca6587
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EventManager
@@ -408,16 +456,10 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: fa3bbeba3670adb99af37899415faa34
+      Hash: 939c142929bab63cd0b88cc9ed8d78c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LigarLanterna
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ItensManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -430,6 +472,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Janela
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -450,6 +498,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TriggerEvent
+  - hash:
+      serializedVersion: 2
       Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -466,6 +520,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 5c4e6e63ac83de9420a40ff24b92ed50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Inventario
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -486,6 +546,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 56367277a38ed12e2b26306f5f3e6bea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Remedios
+  - hash:
+      serializedVersion: 2
       Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -502,6 +568,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Asset
+  - hash:
+      serializedVersion: 2
+      Hash: 3df9fed923cd5c37cffcd7b6efca6587
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SegundaFase
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -540,6 +612,12 @@ ScriptsOnlyBuild:
     className: Animacoes
   - hash:
       serializedVersion: 2
+      Hash: 56367277a38ed12e2b26306f5f3e6bea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LanternaIten
+  - hash:
+      serializedVersion: 2
       Hash: a53651ee3996fbba20dfe0fce02f0b23
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -550,6 +628,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: db12bcbec0e0920a008ba815ab4154ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PilhaInventario
+  - hash:
+      serializedVersion: 2
+      Hash: 56367277a38ed12e2b26306f5f3e6bea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Item
   - hash:
       serializedVersion: 2
       Hash: 50c443b12ccc0b475183318b5088bcc5
@@ -568,6 +658,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 3df9fed923cd5c37cffcd7b6efca6587
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PrimeiraFase
   - hash:
       serializedVersion: 2
       Hash: feb9a5a121d15fa3654d4e50a5233045
@@ -672,7 +768,7 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 131d4ee6596476bac5e022454a558cec
+      Hash: e29f265f41c6762c03cfc5ba4fe739a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -682,6 +778,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: ec354c124a0e55cff0e9bd78493bc069
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gavetas
+  - hash:
+      serializedVersion: 2
+      Hash: e828a76bf08f3972edf67ece6d3b5f0a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BarraEstabilidade
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -724,6 +832,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 56367277a38ed12e2b26306f5f3e6bea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChaveIten
   - hash:
       serializedVersion: 2
       Hash: a29d87571232505e9811e517710242c4
@@ -826,14 +940,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e828a76bf08f3972edf67ece6d3b5f0a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BarraEstabilidade
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Biuld/0408/APDL-.exe
+  playerPath: D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Biuld/11.08/APDL-.exe

@@ -63,35 +63,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BarraEstabilidade.cs" />
-    <Compile Include="Assets\Scripts\EventManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Animacoes.cs" />
-    <Compile Include="Assets\Scripts\Game\ClassePorta.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Audio\Sound.cs" />
+    <Compile Include="Assets\Scripts\Game\Events\ColideEventCorredor.cs" />
+    <Compile Include="Assets\Scripts\Game\Events\ColliderTelefone.cs" />
+    <Compile Include="Assets\Scripts\Game\Events\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Events\MetaEventSet.cs" />
+    <Compile Include="Assets\Scripts\Game\Events\TriggerEvent.cs" />
+    <Compile Include="Assets\Scripts\Game\Fases\PrimeiraFase.cs" />
+    <Compile Include="Assets\Scripts\Game\Fases\SegundaFase.cs" />
     <Compile Include="Assets\Scripts\Game\Gavetas\AbrirGaveta.cs" />
     <Compile Include="Assets\Scripts\Game\Gavetas\GavetaDireita.cs" />
     <Compile Include="Assets\Scripts\Game\Gavetas\GavetaMeioE.cs" />
     <Compile Include="Assets\Scripts\Game\Gavetas\JanelaAbrir.cs" />
-    <Compile Include="Assets\Scripts\Game\Item.cs" />
-    <Compile Include="Assets\Scripts\Game\MouseControler.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Animacoes.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\ChaveIten.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Gavetas.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Interagivel.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Item.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Janela.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\LanternaIten.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Pilhas.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Remedios.cs" />
+    <Compile Include="Assets\Scripts\Game\Itens\Telefone.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\BarraEstabilidade.cs" />
     <Compile Include="Assets\Scripts\Game\Player\LigarLanterna.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\MouseControler.cs" />
     <Compile Include="Assets\Scripts\Game\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerMoviment.cs" />
-    <Compile Include="Assets\Scripts\Game\PortaAnimation.cs" />
-    <Compile Include="Assets\Scripts\Game\PortaManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Porta\ClassePorta.cs" />
+    <Compile Include="Assets\Scripts\Game\Porta\PortaAnimation.cs" />
+    <Compile Include="Assets\Scripts\Game\Porta\PortaManager.cs" />
+    <Compile Include="Assets\Scripts\HUD\Inventario.cs" />
+    <Compile Include="Assets\Scripts\HUD\PilhaInventario.cs" />
     <Compile Include="Assets\Scripts\Menu\ChangScene.cs" />
-    <Compile Include="Assets\Scripts\MetaEventSet.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\ChaveIten.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\ColideEventCorredor.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\Gavetas.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\Interagivel.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\Janela.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\LanternaIten.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\Pilhas.cs" />
-    <Compile Include="Assets\Scripts\ObjetosInterativos\Remedios.cs" />
-    <Compile Include="Assets\Scripts\PrimeiraFase.cs" />
-    <Compile Include="Assets\Scripts\SegundaFase.cs" />
     <Compile Include="Assets\Scripts\StateMachine.cs" />
-    <Compile Include="Assets\Scripts\TriggerEvent.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

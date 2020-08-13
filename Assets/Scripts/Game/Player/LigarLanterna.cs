@@ -67,28 +67,28 @@ public class LigarLanterna : MonoBehaviour
                 luz -= 10;
                 yield return new WaitForSeconds(1);
               
-                if (luz == 30 && Events[0].ID == 1)
+                if (luz <= 30 && Events[0].ID == 1)
                 {
                     Events[0].Event.Invoke();//Pisca
                     Debug.Log("Piscou");
                 }
-                if (luz == 120 && Events[1].ID == 1)
+                if (luz <= 120 && Events[1].ID == 1)
                 {
                     Events[1].Event.Invoke();
                     Debug.Log("100%");
                 }
-                if (luz == 80 && Events[2].ID == 1)
+                if (luz <= 80 && Events[2].ID == 1)
                 {
                     Events[2].Event.Invoke();
                     Debug.Log("75%");
                 }
-                if (luz == 40 && Events[3].ID == 1)
+                if (luz <= 40 && Events[3].ID == 1)
                 {
                     Events[3].Event.Invoke();
                     Debug.Log("50%");
                 }
               
-                if (luz == 0 &&  Events[4].ID == 1)
+                if (luz <= 0 &&  Events[4].ID == 1)
                 {
                      Events[4].Event.Invoke();
                     Debug.Log("25%");
@@ -102,5 +102,10 @@ public class LigarLanterna : MonoBehaviour
             yield break;
         }
          
+    }
+
+    public void AumentarEnergia() 
+    {
+        luz = 160;
     }
 }

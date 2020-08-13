@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     public Camera cam;//area para camera 
     public GameObject TextViewEvermelho;
     public GameObject TextViewE;
-    public GameObject Invent;
     public GameObject playerPrefabMao;
     private Transform chave;
     private Transform lanterna;
@@ -50,7 +49,6 @@ public class Player : MonoBehaviour
         TextViewEvermelho.SetActive(false);
         RayCast();
         TrocarItens();
-        InputAction();
     }
     public void TrocarItens()
     {
@@ -90,10 +88,13 @@ public class Player : MonoBehaviour
             }
             else if (selection.gameObject.CompareTag("Porta"))
             {
-                Debug.Log(chave.GetComponent<ChaveIten>().estado);
                 if (selection.gameObject.name == "PF2" && chave.GetComponent<ChaveIten>().estado == false) 
                 {
                     TextViewEvermelho.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+
+                    }
                 }
                 else 
                 {
@@ -104,26 +105,7 @@ public class Player : MonoBehaviour
         }
 
     }
-    private void InputAction() 
-    {
-        if (Invent.activeSelf == true) 
-        {
-            if (Input.GetKeyDown("i"))
-            {
-                Invent.SetActive(false);
-                Time.timeScale = 1;
-            }
-        }
-        else 
-        {
-            if (Input.GetKeyDown("i"))
-            {
-                Invent.SetActive(true);
-                Time.timeScale = 0;
-            }
-        }
-       
-    }
+    
     void OnTriggerEnter(Collider _col)
     {
         if (_col.gameObject.CompareTag("TriggerFase1"))
