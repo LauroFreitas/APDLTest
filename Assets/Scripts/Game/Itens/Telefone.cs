@@ -39,11 +39,11 @@ public class Telefone : Item
     {
         texto.text = "Veja só quem acordou...";
         yield return new WaitForSeconds(6);
-        texto.text = "Todos estão ansiosos pela nossa chegada.";
+        texto.text = "Sou a sua subconciencia, vou te ajudar sempre que puder.";
         yield return new WaitForSeconds(6);
-        texto.text = "Nossos encontros serão breves, vou te ajudar um pouco.";
+        texto.text = "Caso não tenha percebido você está em coma.";
         yield return new WaitForSeconds(6);
-        texto.text = "Seu estado mental é importante, cuide de nós!";
+        texto.text = "Seu estado mental é importante então cuide bem!";
         yield return new WaitForSeconds(6);
         texto.text = "De uma olhada em baixo do vaso, no corredor.";
         yield return new WaitForSeconds(3);

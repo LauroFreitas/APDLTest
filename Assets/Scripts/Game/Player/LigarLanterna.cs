@@ -98,7 +98,7 @@ public class LigarLanterna : MonoBehaviour
         }
         else
         {
-            Events[6].Event.Invoke();
+            Events[4].Event.Invoke();
             yield break;
         }
          

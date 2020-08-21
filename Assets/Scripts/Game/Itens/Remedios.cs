@@ -9,7 +9,8 @@ public class Remedios :Item
         if (Input.GetKeyDown("e"))
         {
             this.gameObject.SetActive(false);
-            EventManager.singleton.Events[8].Event.Invoke();
+            spriteIteminventario.SetActive(true);
+            RemedioInventari.quantidade += 1;
         }
     }
 }

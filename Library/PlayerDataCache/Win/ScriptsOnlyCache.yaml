@@ -17,6 +17,7 @@ ScriptsOnlyBuild:
     - LigarLanterna
     - MetaEventSet
     - MouseControler
+    - Pause
     - PilhaInventario
     - Pilhas
     - Player
@@ -24,9 +25,12 @@ ScriptsOnlyBuild:
     - PortaAnimation
     - PortaManager
     - PrimeiraFase
+    - RemedioInventari
     - Remedios
     - SegundaFase
     - StateMachine
+    - Telefone
+    - TerceiraFase
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -80,6 +84,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
@@ -107,57 +113,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11658}
+      Script: {instanceID: 11592}
     - Class: 114
-      Script: {instanceID: 11702}
+      Script: {instanceID: 11660}
     - Class: 114
-      Script: {instanceID: 11872}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11892}
+      Script: {instanceID: 11874}
     - Class: 114
-      Script: {instanceID: 11948}
+      Script: {instanceID: 11894}
     - Class: 114
-      Script: {instanceID: 12002}
+      Script: {instanceID: 11950}
     - Class: 114
-      Script: {instanceID: 12076}
+      Script: {instanceID: 12004}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 12078}
     - Class: 114
-      Script: {instanceID: 12218}
+      Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 12250}
+      Script: {instanceID: 12220}
     - Class: 114
-      Script: {instanceID: 12312}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12320}
+      Script: {instanceID: 12254}
     - Class: 114
-      Script: {instanceID: 12432}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 12324}
     - Class: 114
-      Script: {instanceID: 12662}
+      Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 12738}
+      Script: {instanceID: 12630}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12660}
     - Class: 114
-      Script: {instanceID: 12846}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 12874}
+      Script: {instanceID: 12744}
+    - Class: 114
+      Script: {instanceID: 12844}
+    - Class: 114
+      Script: {instanceID: 12852}
     - Class: 114
       Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 12886}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13140}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13188}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13228}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 13198}
+    - Class: 114
+      Script: {instanceID: 13238}
+    - Class: 114
+      Script: {instanceID: 13282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -171,6 +185,8 @@ ScriptsOnlyBuild:
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 167
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -195,11 +211,31 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -214,13 +250,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11872}
+      Script: {instanceID: 11874}
     - Class: 114
-      Script: {instanceID: 12312}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 13228}
+      Script: {instanceID: 13198}
+    - Class: 114
+      Script: {instanceID: 13238}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -236,6 +274,10 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -318,7 +360,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 53d5fbde623724703133270052a36890
+      Hash: f01994b0a6247da04cdccd788c2e4a21
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StateMachine
@@ -430,6 +472,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 3df9fed923cd5c37cffcd7b6efca6587
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TerceiraFase
   - hash:
       serializedVersion: 2
       Hash: e82c0521cdfe8cb6a168ef7208a98d4a
@@ -630,6 +678,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 99915c02dcfe79b840a9a6beb3f0635b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Telefone
+  - hash:
+      serializedVersion: 2
       Hash: db12bcbec0e0920a008ba815ab4154ea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -738,6 +792,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: db12bcbec0e0920a008ba815ab4154ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RemedioInventari
+  - hash:
+      serializedVersion: 2
       Hash: 453d399c9268541370e4613cd543ba6c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -792,6 +852,12 @@ ScriptsOnlyBuild:
     className: BarraEstabilidade
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ColliderTelefone
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -814,6 +880,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 01a578efbe2603812b8c867a148e952d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pause
   - hash:
       serializedVersion: 2
       Hash: d0987ce3e9092dbe0fa30d73f333fffa
@@ -944,4 +1016,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Biuld/11.08/APDL-.exe
+  playerPath: D:/Users/TUDO/Diversos/Unity/GitHub/APDLTest/Biuld/19.08/APDL-.exe

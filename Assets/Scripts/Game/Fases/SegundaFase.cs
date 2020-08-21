@@ -16,6 +16,9 @@ public class SegundaFase : MonoBehaviour
         {
             Events[1].Event.Invoke();
         }
-       
+        if (Events[2].ID == 3)
+        {
+            Events[2].Event.Invoke();
+        }
     }
 }

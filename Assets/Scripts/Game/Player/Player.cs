@@ -91,10 +91,6 @@ public class Player : MonoBehaviour
                 if (selection.gameObject.name == "PF2" && chave.GetComponent<ChaveIten>().estado == false) 
                 {
                     TextViewEvermelho.SetActive(true);
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-
-                    }
                 }
                 else 
                 {
@@ -118,11 +114,19 @@ public class Player : MonoBehaviour
 
         if (_col.gameObject.CompareTag("TriggerFase2"))
         {
-            MetaEventSet.singleton.metaEvents[7].Event.Invoke();
+            MetaEventSet.singleton.metaEvents[8].Event.Invoke();
             PortaManager.singleton.TrancarPortaF2();
             GameObject.Find("StateMachine").GetComponent<StateMachine>().SetFase(3);
 
         }
+
+        if (_col.gameObject.CompareTag("TriggerFase3"))
+        {
+            MetaEventSet.singleton.metaEvents[7].Event.Invoke();
+            Debug.Log("Teste");
+            PortaManager.singleton.TrancarPortaF2();
+            GameObject.Find("StateMachine").GetComponent<StateMachine>().SetFase(4);
+        }
     }
-    
+
 }

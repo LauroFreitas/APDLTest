@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Game\Events\TriggerEvent.cs" />
     <Compile Include="Assets\Scripts\Game\Fases\PrimeiraFase.cs" />
     <Compile Include="Assets\Scripts\Game\Fases\SegundaFase.cs" />
+    <Compile Include="Assets\Scripts\Game\Fases\TerceiraFase.cs" />
     <Compile Include="Assets\Scripts\Game\Gavetas\AbrirGaveta.cs" />
     <Compile Include="Assets\Scripts\Game\Gavetas\GavetaDireita.cs" />
     <Compile Include="Assets\Scripts\Game\Gavetas\GavetaMeioE.cs" />
@@ -95,7 +96,9 @@
     <Compile Include="Assets\Scripts\Game\Porta\PortaAnimation.cs" />
     <Compile Include="Assets\Scripts\Game\Porta\PortaManager.cs" />
     <Compile Include="Assets\Scripts\HUD\Inventario.cs" />
+    <Compile Include="Assets\Scripts\HUD\Pause.cs" />
     <Compile Include="Assets\Scripts\HUD\PilhaInventario.cs" />
+    <Compile Include="Assets\Scripts\HUD\RemedioInventari.cs" />
     <Compile Include="Assets\Scripts\Menu\ChangScene.cs" />
     <Compile Include="Assets\Scripts\StateMachine.cs" />
     <Reference Include="Unity.Timeline.Editor">

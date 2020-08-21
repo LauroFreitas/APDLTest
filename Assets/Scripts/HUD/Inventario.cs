@@ -21,7 +21,7 @@ public class Inventario : MonoBehaviour
                 }
             }
         }
-        else 
+        else
         {
             if (Input.GetKeyDown("i"))
             {
@@ -33,5 +33,6 @@ public class Inventario : MonoBehaviour
                 }
             }
         }
+
     }
 }
